@@ -1,0 +1,371 @@
+
+
+*{ 
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/** Mixin **/
+    @mixin Parrafos{
+        font-size: 1rem;
+        text-align: center;
+        margin: 1%;
+        padding: 1%;
+        color: white;
+    }
+
+    @mixin Articulos{
+
+        padding: 1rem;
+        margin: 1rem;
+
+    }
+
+    @mixin Textmap {
+
+        margin-left: 1%;
+        font-size: 1.5rem;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: whitesmoke;
+
+    }
+
+
+    /** Parrafos / Articulos **/
+
+    p{
+        @include Parrafos();
+    }
+
+    article{
+
+        @include Articulos();
+
+    }
+
+/** encabezado **/
+
+header{
+
+    font-family: 'Inconsolata', monospace;
+    font-size: large;  
+}
+
+
+.Division{
+    border-bottom: 3px solid #9EDE73;
+    .Imagendemenu{
+        height: 5%;
+        width: 5%;
+    }
+}
+
+.Logo1{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+    padding: 1%;
+   ;
+ }
+
+/**  Menu de Navegacion **/
+
+
+nav{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    
+    .nav-enlace{
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+    }
+}
+
+
+/** Titulo Edicion**/
+
+ .Texto1{
+    border-bottom: 0.5rem solid #9EDE73;
+    text-align: center;
+    color: black;
+}
+
+.texto2{
+    color:#9EDE73 ;
+    border-bottom: 0.5rem solid #9EDE73;
+    text-align: center;
+}
+
+/** GRADIANTE DEL MAIN **/
+
+
+.Gradiante{
+   background-image: url('../Estilos/imagenes\ monchis/fondo.png');
+    height: 100%;
+    width: 100%;
+}
+
+/** Articulos del menu **/
+
+.Cuerpo1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .imagenredonda{
+        width: 300px;
+        height:250px;
+        border-radius:100%;
+     }
+        .Textedit{
+            text-align: center;
+            font-size: 20px;
+            color: #79D70F;
+         }
+}
+
+
+/** Pie de Pagina y Redes Socilaes**/
+
+
+.Piedepagina{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #B9D2D2;
+    padding: 1%;  
+
+     
+    .Footer{
+
+        display: flex;
+        background-color: #9EDE73;
+        align-content: stretch;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding-left: 10%;
+
+        
+       
+    }
+   
+    .RedeSociales{
+        width: 20%;
+        height: 20%;
+    }
+     
+}
+
+/** GridArea **/
+
+    .GrillaArea{
+
+        display: grid;
+        grid-template-areas: 
+    
+        " eventos    medio   foto " /* primera fila */
+    
+        " eventos    medio   foto  " /* segunda Fila*/
+    
+        " eventos    medio   foto " /* tercera Fila*/
+    
+        " final      final   final " /* cuarta fila*/
+        ;
+    
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    main{
+        grid-area: medio;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(52, 51, 51);
+    }
+    section{    
+        grid-area: foto;
+    }
+   
+    
+    aside{
+        grid-area: eventos;
+    }
+
+    footer{
+        
+       grid-area: final; 
+       display: flex;
+       justify-content: space-evenly;
+       background-color: #4ECCA3;
+       padding: 10%;
+    }
+    
+
+
+   /** imagenes del Grid area **/
+
+    .imgedit{
+        width: 100%;
+        height:100%;
+    }
+    
+    .imgedit2{
+        width: 100%;
+        height: 100%;
+    
+    }
+
+
+    /** Semantica de Ubicacion **/ 
+
+    .Catering{
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+   }  
+
+
+    .textoalineado{
+        padding: 5%;
+        font-size: 1rem;
+        color: white;
+
+    }
+
+
+    /** Edicion del menu y el mapa **/
+
+    .Menu3{
+
+        background-image: url('imagenes monchis/plantas.jpeg');
+        opacity: initial;
+        padding: 1%;
+             
+        .map{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between; 
+        }   
+    
+     }
+
+
+/** Edicion de mapas **/
+
+    .map2{
+    
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        background-color: #CDFFEB;
+        transition: all 2s;
+
+    }
+    
+    .map2:hover{
+        background-color: aqua;
+    
+    }
+
+     /** Txto de los mapas y el menu con efecto **/
+
+
+    .Textmap{
+        @include Textmap();
+             
+         }   
+
+    .imgborde{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    
+    }
+    
+    .Correo{
+        height: 10%;
+        width: 10%;
+        background-color: #CDFFEB;
+        border-radius: 10%;
+        margin: 3%;
+    }
+
+
+    /** Pagina de Eventos con Grid Area **/
+
+
+
+   .GridArea2{ 
+
+    display: grid;
+    grid-template-areas: 
+
+    
+        " evento1    evento2   evento3 " /* primera fila */
+    
+        " evento1    evento2   evento3  " /* segunda Fila*/
+    
+        " evento1    evento2   evento3 " /* tercera Fila*/
+        ;
+    
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
+        
+    } 
+
+
+.Evento1{
+    grid-area: evento1;
+    display: flex;
+    flex-direction: column;
+    border: 10px inset ;
+    margin: 5%;
+    padding: 5%;
+}
+
+.Evento2 {
+    grid-area: evento2;
+    display: flex;
+    flex-direction: column;
+    border: 10px inset;
+    margin: 5%;
+    padding: 5%;
+}
+
+.Evento3 {
+    grid-area: evento3;
+    display: flex;
+    flex-direction: column;
+    border: 10px inset ;
+    margin: 5%;
+    padding: 5%;   
+}
+
+.EventoT{
+    padding: 5%;
+    font-size: 2rem;
+    color: #79D70F; }
+
+.ParrafoT{
+    padding: 5%;
+    font-size: 1rem;
+    color: white;}
+
+    .EventoF{
+        background-image: url('../Estilos/imagenes\ monchis/fondo.png');
+    }
+        .EditF{
+            background-color: rgba(0, 0, 0, 0.6);
+}
+ 
+ //media querys//
+
+ @import "responsive";
